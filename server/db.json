@@ -16,7 +16,7 @@
     },
     {
       "id": 3,
-      "name": "Marius Beddows",
+      "name": "Marius Beddowsie",
       "email": "mbeddows2@topsy.com",
       "address": "5 Kennedy Drive",
       "active": false
@@ -642,13 +642,6 @@
       "name": "Olga MacNeilage",
       "email": "omacneilage2q@fc2.com",
       "address": "8 North Park",
-      "active": false
-    },
-    {
-      "id": 100,
-      "name": "Milzie Cosbee",
-      "email": "mcosbee2r@go.com",
-      "address": "0642 Spaight Junction",
       "active": false
     }
   ]

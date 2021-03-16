@@ -14,7 +14,7 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th *ngFor="let col of cols" (click)="onChangeSort(col)">{{col}}</th>
+          <th class="sortedHeads" *ngFor="let col of cols" (click)="onChangeSort(col)">{{col}}</th>
           <th></th>
         </tr>
       </thead>

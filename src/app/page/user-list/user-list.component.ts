@@ -31,7 +31,6 @@ export class UserListComponent implements OnInit {
 
   onDelete(user: User): void {
     this.userService.delete(user);
-    this.toastr.warning('You have successfully deleted a user', 'Deleted', { timeOut: 3000 });
   }
 
 }

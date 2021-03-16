@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from '../model/user';
 
@@ -12,7 +13,8 @@ export class UserService {
   list$: BehaviorSubject<User[]> = new BehaviorSubject<User[]>([]);
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private toastr: ToastrService
   ) { this.getAll() }
 
   /**
@@ -43,6 +45,7 @@ export class UserService {
       this.http.delete(`${this.endpoint}/${user.id}`).subscribe(
         () => this.getAll()
       )
+      this.toastr.warning('You have successfully deleted a user', 'Deleted', { timeOut: 3000 });
     }
   }
 

@@ -643,6 +643,13 @@
       "email": "omacneilage2q@fc2.com",
       "address": "8 North Park",
       "active": false
+    },
+    {
+      "id": 100,
+      "name": "Pap Gergő",
+      "email": "pap.gergo@gmail.com",
+      "address": "Rákóczi utca 54",
+      "active": true
     }
   ]
 }

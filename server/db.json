@@ -43,13 +43,6 @@
       "active": true
     },
     {
-      "id": 8,
-      "name": "Stillman Crowche",
-      "email": "scrowche7@umich.edu",
-      "address": "53 Bunting Court",
-      "active": true
-    },
-    {
       "id": 9,
       "name": "Roderich Jimmison",
       "email": "rjimmison8@nih.gov",
@@ -57,25 +50,11 @@
       "active": true
     },
     {
-      "id": 10,
-      "name": "Nana Stalley",
-      "email": "nstalley9@sfgate.com",
-      "address": "969 Oak Valley Pass",
-      "active": false
-    },
-    {
       "id": 11,
       "name": "Stanly Hembling",
       "email": "shemblinga@narod.ru",
       "address": "0 Kim Street",
       "active": true
-    },
-    {
-      "id": 12,
-      "name": "Gawain McKillop",
-      "email": "gmckillopb@geocities.jp",
-      "address": "0 School Way",
-      "active": false
     },
     {
       "id": 13,

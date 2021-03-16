@@ -29,6 +29,7 @@ export class UserEditorComponent implements OnInit {
     })
   );
 
+  submitted: boolean = false;
   constructor(
     private userService: UserService,
     private activatedRoute: ActivatedRoute,
@@ -40,10 +41,12 @@ export class UserEditorComponent implements OnInit {
 
   onUpdate(form: NgForm, user: User): void {
     if (user.id !== 0) {
+      this.submitted = true;
       this.userService.update(user).subscribe(
         ev => this.router.navigate(['users'])
       )
     } else {
+      this.submitted = true;
       this.userService.create(user).subscribe(
         ev => this.router.navigate(['users'])
       )

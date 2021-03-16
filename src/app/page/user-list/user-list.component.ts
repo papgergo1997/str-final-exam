@@ -11,6 +11,7 @@ import { UserService } from 'src/app/service/user.service';
 export class UserListComponent implements OnInit {
 
   users$: BehaviorSubject<User[]> = this.userService.list$;
+  phrase: string = '';
 
   constructor(
     private userService: UserService,

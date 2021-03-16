@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { User } from 'src/app/model/user';
@@ -34,6 +35,7 @@ export class UserEditorComponent implements OnInit {
     private userService: UserService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
+    private toaster: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -44,12 +46,14 @@ export class UserEditorComponent implements OnInit {
       this.submitted = true;
       this.userService.update(user).subscribe(
         ev => this.router.navigate(['users'])
-      )
+      );
+      this.toaster.info('You have successfully updated a user!', 'Updated', { timeOut: 3000 });
     } else {
       this.submitted = true;
       this.userService.create(user).subscribe(
         ev => this.router.navigate(['users'])
-      )
+      );
+      this.toaster.success('You have successfully created a user!', 'Created', { timeOut: 3000 });
     }
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from 'src/app/model/user';
 import { UserService } from 'src/app/service/user.service';
@@ -18,6 +19,7 @@ export class UserListComponent implements OnInit {
 
   constructor(
     private userService: UserService,
+    private toastr: ToastrService
   ) { this.userService.getAll() }
 
   ngOnInit(): void {
@@ -29,6 +31,7 @@ export class UserListComponent implements OnInit {
 
   onDelete(user: User): void {
     this.userService.delete(user);
+    this.toastr.warning('You have successfully deleted a user', 'Deleted', { timeOut: 3000 });
   }
 
 }

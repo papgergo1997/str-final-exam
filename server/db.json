@@ -64,13 +64,6 @@
       "active": true
     },
     {
-      "id": 14,
-      "name": "Richardo Dobbs",
-      "email": "rdobbsd@i2i.jp",
-      "address": "4 Truax Alley",
-      "active": true
-    },
-    {
       "id": 15,
       "name": "Linc Tilston",
       "email": "ltilstone@rediff.com",
@@ -85,15 +78,8 @@
       "active": true
     },
     {
-      "id": 17,
-      "name": "Barrie Dollar",
-      "email": "bdollarg@nba.com",
-      "address": "20777 Village Hill",
-      "active": false
-    },
-    {
       "id": 18,
-      "name": "Gaile Phelp",
+      "name": "Gaile Phelpie",
       "email": "gphelph@geocities.com",
       "address": "91 Evergreen Road",
       "active": false

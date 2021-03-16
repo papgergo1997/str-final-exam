@@ -59,4 +59,7 @@ export class UserService {
    * The method is: this.http.patch
    */
 
+  update(user: User): Observable<User> {
+    return this.http.patch<User>(`${this.endpoint}/${user.id}`, user);
+  }
 }

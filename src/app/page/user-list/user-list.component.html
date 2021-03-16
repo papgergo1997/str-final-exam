@@ -11,16 +11,12 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Address</th>
-          <th>Active</th>
+          <th *ngFor="let col of cols" (click)="onChangeSort(col)">{{col}}</th>
           <th></th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let user of users$ | async | filter:filterKey:phrase">
+        <tr *ngFor="let user of users$ | async | filter:filterKey:phrase | sort:sortKey:ascend">
           <td>{{ user.id }}</td>
           <td>{{ user.name }}</td>
           <td>{{ user.email }}</td>

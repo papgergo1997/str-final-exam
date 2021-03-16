@@ -13,7 +13,6 @@ export class UserListComponent implements OnInit {
   users$: BehaviorSubject<User[]> = this.userService.list$;
   phrase: string = '';
   filterKey: string = 'name';
-  ascend: boolean = true;
   sortKey: string = '';
   cols: string[] = Object.keys(new User())
 
@@ -26,7 +25,6 @@ export class UserListComponent implements OnInit {
 
   onChangeSort(data: string): void {
     this.sortKey = data;
-    this.ascend = !this.ascend;
   }
 
   onDelete(user: User): void {

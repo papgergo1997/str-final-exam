@@ -12,6 +12,7 @@ export class UserListComponent implements OnInit {
 
   users$: BehaviorSubject<User[]> = this.userService.list$;
   phrase: string = '';
+  filterKey: string = 'name';
 
   constructor(
     private userService: UserService,

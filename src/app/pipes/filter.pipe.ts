@@ -13,7 +13,7 @@ export class FilterPipe implements PipeTransform {
     phrase = typeof phrase !== 'number' ? ('' + phrase).toLowerCase() : phrase;
 
     return value.filter((item) => {
-      ('' + item[key]).toLowerCase().includes((phrase as string));
+      return ('' + item[key]).toLowerCase().includes((phrase as string));
     })
   }
 

@@ -6,8 +6,7 @@
       <div class="form-group">
         <label>Name</label>
         <!-- Validation: min 8 char, max 40 char, required -->
-        <input class="form-control" type="text" name="name" [(ngModel)]="user.name" pattern=".{8,40}"
-          placeholder="Sample Name" required>
+        <input class="form-control" type="text" name="name" [(ngModel)]="user.name" pattern=".{8,40}" required>
         <div [hidden]="userForm.controls.name?.valid || userForm.controls.name?.pristine" class="error-feedback">
           Name must be 8-40 characters long
         </div>
@@ -17,8 +16,7 @@
         <!-- Validation: valid email, required.
           Help: https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript -->
         <input class="form-control" type="email" name="email" [(ngModel)]="user.email"
-          pattern="^[a-z0-9.-_]{2,}@{1}[a-z0-9.-]{2,}\.{1}[a-z]{2,4}$" placeholder="sample12345@samplemail.com"
-          required>
+          pattern="^[a-z0-9.-_]{2,}@{1}[a-z0-9.-]{2,}\.{1}[a-z]{2,4}$" required>
         <div [hidden]="userForm.controls.email?.valid || userForm.controls.email?.pristine" class="error-feedback">
           Wrong email format | recommended format: sample12345@samplemail.com
         </div>
@@ -26,8 +24,7 @@
       <div class="form-group">
         <label>Address</label>
         <!-- Validation: min 8 char, max 100 char, required -->
-        <input class="form-control" type="text" name="address" [(ngModel)]="user.address" pattern=".{8,100}"
-          placeholder="00. Sample Street" required>
+        <input class="form-control" type="text" name="address" [(ngModel)]="user.address" pattern=".{8,100}" required>
         <div [hidden]="userForm.controls.address?.valid || userForm.controls.address?.pristine" class="error-feedback">
           Address must be 8-100 characters long
         </div>
